@@ -129,7 +129,9 @@ flask run --debug
 | **OpenCV / pytesseract** | For image recognition and text extraction        |
 | **dotenv**       | Manage environment variables securely              |
 
-# 🎬 Output Video: [Watch here]()
+# 🎬 Output Video: 
+
+📽️Watch here: [@chatfusion](https://sites.google.com/view/dhikshacyber/other-projects)
 
 # 📌 Use Case Scenarios
 
