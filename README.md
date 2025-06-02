@@ -69,3 +69,97 @@ ChatFusion/
 └── images/
     └── README.txt # Folder placeholder to keep images visible in git
 ```
+# Installation
+
+Follow these steps to set up and run the project locally:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/DHIKSHAMP/chatfusion.git
+   cd chatfusion
+   ```
+2. **Create and activate a virtual environment (recommended):**
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate      # On macOS/Linux
+   venv\Scripts\activate         # On Windows
+   ```
+3. **Install dependencies:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Set up environment variables:
+
+    Rename .env.example to .env.
+
+    Update the variables inside .env with your own values (API keys, database URL, etc.).
+
+5. **Run the Flask application:**
+
+   ```bash
+   flask run
+   ```
+6. **Open your browser and go to:**
+
+    ```bash
+    Open your browser and go to:
+    ```
+Optional:
+
+To run the app with debug mode on (for development):
+```bash
+flask run --debug
+```
+
+# 🛠️ Tech Stack
+
+| Technology       | Description                                         |
+|------------------|-----------------------------------------------------|
+| **Python**       | Core programming language                          |
+| **Flask**        | Web framework for building the app                 |
+| **HTML/CSS**     | Frontend templating and styling                    |
+| **JavaScript**   | Enhances interactivity in UI                       |
+| **MongoDB**      | Database to store questions and responses          |
+| **Google Gemini API** | AI-powered responses using generative models      |
+| **SpeechRecognition** | Used for converting speech to text                |
+| **gTTS / pyttsx3**| Used for converting text to speech                 |
+| **OpenCV / pytesseract** | For image recognition and text extraction        |
+| **dotenv**       | Manage environment variables securely              |
+
+# 🎬 Output Video: [Watch here]()
+
+# 📌 Use Case Scenarios
+
+| Scenario | Description |
+|----------|-------------|
+| **Job Seekers** | Upload resumes and ask questions like "What are my key skills?" or "Which experience is most relevant for a data science role?" |
+| **Students** | Upload academic documents or notes and interact via questions to revise content. |
+| **Business Users** | Convert voice queries into intelligent answers and extract insights from PDFs and images. |
+| **Accessibility Support** | Visually impaired users can benefit from speech-to-text and text-to-speech features. |
+| **Research Assistance** | Quickly scan documents or images for important content and interact via natural language. |
+
+---
+
+# 🚀 Future Enhancements
+
+| Feature | Description |
+|---------|-------------|
+| **User Authentication** | Enable user login/signup for personalized experience and data security. |
+| **History Dashboard** | Provide a UI to view all previous queries and responses from MongoDB. |
+| **Multi-Language Support** | Extend speech/text capabilities to support other languages. |
+| **Cloud Storage Integration** | Store uploaded files securely on cloud platforms like AWS S3 or Firebase. |
+| **Mobile App Version** | Develop a cross-platform mobile app for on-the-go interaction. |
+| **AI Voice Assistant Mode** | Turn ChatFusion into a real-time voice assistant with continuous conversation. |
+
+# 👤 Author
+
+**DHIKSHA M P**  
+
+🌐 GitHub: [@DHIKSHAMP](https://github.com/DHIKSHAMP)
+
+🔗 LinkedIn: [linkedin.com/in/madhumithab](https://linkedin.com/in/dhiksha-m-p-095028257)
+
+🌍 Portfolio: [Portfolio](https://sites.google.com/view/dhikshacyber/about)
