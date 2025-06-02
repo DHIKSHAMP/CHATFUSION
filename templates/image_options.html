@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Options</title>
+    <style>
+        body {
+            background: url('https://img.freepik.com/premium-vector/chatbot-blue-background-artificial-intelligence-concept-vector-illustration_319430-71.jpg?w=1060') no-repeat center center fixed;
+            background-size: cover;
+            color: aliceblue;
+            margin-top: 300px;
+            margin-left: 1000px;
+        }
+        h1{
+            font-size: 24px;
+        }
+        button {
+            font-size: 20px; /* Increase text size */
+            padding: 15px 30px; /* Increase button padding */
+            border-radius: 10px; /* Rounded corners */
+            border: none; /* Remove border */
+            background-color:rgb(234, 236, 238); /* Button color */
+            color: black; /* Text color */
+            cursor: pointer;
+            margin: 10px; /* Add spacing between buttons */
+        }
+        
+        button:hover {
+            background-color:rgb(6, 66, 131); /* Darker color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Processing Options</h1>
+    <button onclick="location.href='{{ url_for('general_image_recognition') }}'">General image recognition</button>
+    <button onclick="location.href='{{ url_for('text_recognition') }}'">Text recognition</button>
+</body>
+</html>

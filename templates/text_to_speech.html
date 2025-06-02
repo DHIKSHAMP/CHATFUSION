@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text-to-Speech Interaction</title>
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/premium-vector/digital-chatbot-virtual-assistant-artificial-intelligence-chat-concept-with-chat-bubble_618588-1139.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        form,p,h1,h2{
+            margin-left: 900px;
+            font-size: 30px;
+        }
+        a{
+            margin-left: 900px;
+            margin-bottom: 0px; 
+            color:aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text-to-Speech Interaction</h1>
+    <form action="{{ url_for('text_to_speech_route') }}" method="POST">
+        <label for="question">Ask a question:</label>
+        <input type="text" id="question" name="question" required>
+        <button type="submit">Ask</button>
+    </form>
+    
+    {% if answer %}
+        <h2>AI Response:</h2>
+        <p>{{ answer }}</p>
+    {% endif %}
+    
+    <a href="{{ url_for('home') }}">Back to Main Menu</a>
+</body>
+</html>

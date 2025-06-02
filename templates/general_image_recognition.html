@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Recognition</title>
+    <style>
+        body {
+            background: url('https://www.santanderassetmanagement.es/wp-content/uploads/2018/07/chatbots.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white; /* Ensures text is readable */
+            text-align: center; /* Centers the text */
+            font-family: Arial, sans-serif;
+            margin-left: -800px;
+            margin-top: 200px;
+        }
+        
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+            padding-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds shadow for better visibility */
+        }
+
+        p {
+            font-size: 1.5em;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5); /* Adds contrast behind text */
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Recognition Result</h1>
+    <p>The image contains: <strong>{{ result }}</strong></p><br>
+    <a href="{{ url_for('image_processing') }}">Back to Upload</a>
+</body>
+</html>
+

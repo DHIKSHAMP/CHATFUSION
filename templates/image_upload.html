@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url('https://t3.ftcdn.net/jpg/09/13/02/68/360_F_913026804_xYPUHe13KlmQV88El5VN0xgtvcRNkBb0.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #fff;
+        }
+
+        /* Dark Semi-Transparent Overlay */
+        .overlay {
+            background: rgba(0, 0, 0, 0.6); /* Ensures text is readable */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+            width: 400px;
+            text-align: center;
+            margin-left: -800px;
+        }
+
+        /* Title Styling */
+        h1 {
+            font-size: 26px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 6px;
+            border: none;
+            background: #fff;
+            color: #333;
+            font-weight: 500;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Button Styling */
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: white;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 12px rgba(255, 75, 43, 0.5);
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #ff4b2b, #ff416c);
+            transform: translateY(-3px);
+            box-shadow: 0px 6px 18px rgba(255, 75, 43, 0.7);
+        }
+
+        /* Link Styling */
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #ffcc70;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffd89b;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 450px) {
+            .overlay {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>Upload an Image</h1>
+        <form action="{{ url_for('image_upload') }}" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image_file" accept="image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+        <a href="{{ url_for('home') }}">Back to Main Menu</a>
+    </div>
+</body>
+</html>

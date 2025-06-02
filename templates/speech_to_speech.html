@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech-to-Speech Interaction</title>
+    <style>
+        body {
+            background-image: url('https://www.excelsoftcorp.com/ai-levate/wp-content/uploads/sites/9/2024/02/woman-looks-robot-ca-compressed.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Ensures background stays fixed while scrolling */
+            height: 100vh; /* Ensures full background coverage */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Improve text readability */
+        h1, h2, p, label, a {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            text-align: center;
+            font-size: 30px;
+            margin-top: 30px
+
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.6); /* Adds a semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            width: fit-content;
+            margin: auto;
+            margin-top: 520px;
+        }
+
+        button, select {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        a {
+            color: yellow;
+            font-weight: bold;
+            margin-left: 700px;
+            margin-top: -600px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Speech-to-Speech Interaction</h1>
+    <form action="{{ url_for('speech_to_speech_route') }}" method="POST">
+        <label for="mic">Select a Microphone:</label>
+        <select name="mic" id="mic" required>
+            {% for mic in mic_list %}
+                <option value="{{ mic }}">{{ mic }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Record your question</button>
+    </form>
+    
+    {% if answer %}
+        <h2>AI Response:</h2>
+        <p>{{ answer }}</p>
+    {% endif %}
+    
+    <a href="{{ url_for('home') }}">Back to Main Menu</a>
+</body>
+</html>

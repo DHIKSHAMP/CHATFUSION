@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Interaction</title>
+</head>
+<body>
+    <h1>Resume Interaction</h1>
+    
+    <h2>Choose your interaction:</h2>
+    
+    <!-- Buttons for different interaction types -->
+    <form action="{{ url_for('text_to_text_route') }}" method="POST">
+        <button type="submit">Text-to-Text</button>
+    </form>
+
+    <form action="{{ url_for('text_to_speech_route') }}" method="POST">
+        <button type="submit">Text-to-Speech</button>
+    </form>
+
+    <form action="{{ url_for('speech_to_text_route') }}" method="POST">
+        <button type="submit">Speech-to-Text</button>
+    </form>
+
+    <form action="{{ url_for('speech_to_speech_route') }}" method="POST">
+        <button type="submit">Speech-to-Speech</button>
+    </form>
+
+    <a href="{{ url_for('home') }}">Back to Main Menu</a>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text-to-Text Interaction</title>
+    <style>
+        body {
+            background-image: url('https://agency.siteimage.com.ua/wp-content/uploads/2024/05/ivan.pylypchuk_a_blue_3D_AI_Chatbot_in_a_empty_space_in_the_sty_533c9fc7-e2d0-4632-b194-998e0a0157cb-1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        form{
+            margin-left: 800px;
+        }
+        a{
+            margin-left: 800px;
+        }
+        h1{
+            margin-left: 800px;
+        }
+        h2{
+            margin-left: 800px;
+        }
+        p{
+            margin-left: 800px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text-to-Text Interaction</h1>
+    <form action="{{ url_for('text_to_text_route') }}" method="POST">
+        <label for="question">Ask a question:</label>
+        <input type="text" id="question" name="question" required>
+        <button type="submit">Ask</button>
+    </form>
+    
+    {% if answer %}
+        <h2>AI Response:</h2>
+        <p>{{ answer }}</p>
+    {% endif %}
+    
+    <a href="{{ url_for('home') }}">Back to Main Menu</a>
+</body>
+</html>

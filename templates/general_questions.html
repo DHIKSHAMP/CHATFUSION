@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Questions</title>
+    <style>
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/021/835/780/non_2x/artificial-intelligence-chatbot-assistance-background-free-vector.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-bottom: 20px;
+            margin-left: -800px;
+            color: black;   
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: -800px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Interaction Method</h1>
+    <button onclick="location.href='{{ url_for('text_to_text_route') }}'">Text-to-Text</button>
+    <button onclick="location.href='{{ url_for('text_to_speech_route') }}'">Text-to-Speech</button>
+    <button onclick="location.href='{{ url_for('speech_to_text_route') }}'">Speech-to-Text</button>
+    <button onclick="location.href='{{ url_for('speech_to_speech_route') }}'">Speech-to-Speech</button>
+</body>
+</html>

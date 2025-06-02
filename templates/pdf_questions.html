@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload PDF</title>
+    <style>
+        body {
+            background: url('https://static.vecteezy.com/system/resources/previews/021/835/780/non_2x/artificial-intelligence-chatbot-assistance-background-free-vector.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: rgb(0, 0, 0); /* Ensures text is readable */
+            margin-top: 200px ;
+            margin-left: -700px;
+        }
+
+        h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.6); /* Slightly transparent black */
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        input, button {
+            font-size: 1.2em;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: white;
+            background-color: #28a745;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload a PDF for Question Answering</h1>
+    <form action="{{ url_for('pdf_questions') }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="pdf_file" accept=".pdf" required>
+        <button type="submit">Upload</button>
+    </form>
+    <br>
+    <a href="{{ url_for('home') }}">Back to Main Menu</a>
+</body>
+</html>

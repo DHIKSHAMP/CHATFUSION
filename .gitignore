@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment
+.env
+.env.*
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# VS Code and PyCharm
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploaded/temporary files
+uploads/
+images/
+*.log
+
+# Google credentials
+service_account.json
+
+# Cache or temp folders
+.cache/
+*.bak

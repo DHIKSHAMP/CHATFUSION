@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech-to-Text Interaction</title>
+    <style>
+        body {
+            background-image: url('https://agency.siteimage.com.ua/wp-content/uploads/2024/07/ivan.pylypchuk_a_blue_3D_AI_Chatbot_in_a_empty_space_in_the_sty_39af46e0-1b6e-4d45-856c-55f4bb56962e-1.png');
+            background-size: cover;
+            
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            margin-left: -800px;
+        }
+        h2 {
+            text-align: left;
+            margin-left: -800px; /* Adjust this value as needed */
+            font-size: 24px; /* Increase font size */
+            font-weight: bold;
+        }
+        
+        p {
+            text-align: left;
+            margin-left: -800px; /* Align with the h2 */
+            font-size: 20px; /* Increase font size */
+        }
+        
+        form {
+            text-align: center;
+            margin-top: 30px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-left: 30px;
+            width:600px;
+        }
+        label, button {
+            font-size: 16px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            margin-left: -800px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Speech-to-Text Interaction</h1>
+    <form action="{{ url_for('speech_to_text_route') }}" method="POST">
+        <label for="mic">Select a Microphone:</label>
+        <select name="mic" id="mic" required>
+            {% for mic in mic_list %}
+                <option value="{{ mic }}">{{ mic }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Record your question</button>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% elif answer %}
+        <h2>AI Response:</h2>
+        <p>{{ answer }}</p>
+    {% elif question %}
+        <p>Your Question: {{ question }}</p>
+    {% endif %}
+
+    {% if log_messages %}
+        <h3>Process Logs:</h3>
+        <ul>
+            {% for message in log_messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+    <a href="{{ url_for('home') }}">Back to Main Menu</a>
+</body>
+</html>
