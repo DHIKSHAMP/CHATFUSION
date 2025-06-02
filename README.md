@@ -162,7 +162,7 @@ flask run --debug
 
 🌐 GitHub: [@DHIKSHAMP](https://github.com/DHIKSHAMP)
 
-🔗 LinkedIn: [linkedin.com/in/madhumithab](https://linkedin.com/in/dhiksha-m-p-095028257)
+🔗 LinkedIn: [linkedin.com/in/dhikshamp](https://linkedin.com/in/dhiksha-m-p-095028257)
 
 🌍 Portfolio: [Portfolio](https://sites.google.com/view/dhikshacyber/about)
 
