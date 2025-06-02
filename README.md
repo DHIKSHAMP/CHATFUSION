@@ -165,3 +165,14 @@ flask run --debug
 🔗 LinkedIn: [linkedin.com/in/madhumithab](https://linkedin.com/in/dhiksha-m-p-095028257)
 
 🌍 Portfolio: [Portfolio](https://sites.google.com/view/dhikshacyber/about)
+
+## ⚖️ License
+
+This project is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) – see the [LICENSE](./LICENSE) file for details.
+
+## 🌟 Contributing
+
+💡 Got suggestions or new ideas?  
+🛠️ Pull Requests are welcome!  
+📧 Contact me if you'd like to collaborate.
+
