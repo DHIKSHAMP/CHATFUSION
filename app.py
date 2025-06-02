@@ -11,8 +11,8 @@ from dotenv import load_dotenv
 
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY", os.urandom(24))
-app.config['UPLOAD_FOLDER'] = os.getenv("UPLOAD_FOLDER")
-app.config['IMAGE_UPLOAD_FOLDER'] = os.getenv("IMAGE_UPLOAD_FOLDER")
+app.config['UPLOAD_FOLDER'] = os.path.join(os.getcwd(), 'uploads')
+app.config['IMAGE_UPLOAD_FOLDER'] = os.path.join(os.getcwd(), 'images')
 # Configure API Key
 # Directly assigning the API key in the code
 load_dotenv()
